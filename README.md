@@ -78,13 +78,13 @@ to contribute to this project.
 ## Versioning
 
 This project uses [SemVer](http://semver.org/) for versioning. For the versions
-available, see the [tags on this repository](https://github.com/fscm/terraform-module-aws-vpc/tags).
+available, see the [tags on this repository](https://github.com/fscm/terraform-module-aws-s3/tags).
 
 ## Authors
 
 * **Frederico Martins** - [fscm](https://github.com/fscm)
 
-See also the list of [contributors](https://github.com/fscm/terraform-module-aws-vpc/contributors)
+See also the list of [contributors](https://github.com/fscm/terraform-module-aws-s3/contributors)
 who participated in this project.
 
 ## License
