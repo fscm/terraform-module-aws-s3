@@ -12,7 +12,7 @@
 
 variable "private_route_tables" {
   description = "List of the private Route Table Identifiers to be associated with the S3 Endpoint."
-  default     = "[]"
+  default     = []
   type        = "list"
 }
 
