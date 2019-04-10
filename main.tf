@@ -30,15 +30,15 @@ resource "aws_vpc_endpoint" "s3" {
 # Network routing association.
 #
 resource "aws_vpc_endpoint_route_table_association" "private" {
-  depends_on = ["aws_vpc_endpoint.s3"]
-  count      = "${length(var.private_route_tables)}"
+  depends_on      = ["aws_vpc_endpoint.s3"]
+  count           = "${length(var.private_route_tables)}"
   route_table_id  = "${element(concat(var.private_route_tables, list("")), count.index)}"
   vpc_endpoint_id = "${aws_vpc_endpoint.s3.id}"
 }
 
 resource "aws_vpc_endpoint_route_table_association" "public" {
-  depends_on = ["aws_vpc_endpoint.s3"]
-  count      = "${length(var.public_route_tables)}"
+  depends_on      = ["aws_vpc_endpoint.s3"]
+  count           = "${length(var.public_route_tables)}"
   route_table_id  = "${element(concat(var.public_route_tables, list("")), count.index)}"
   vpc_endpoint_id = "${aws_vpc_endpoint.s3.id}"
 }
